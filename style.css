@@ -25,3 +25,9 @@
     border-radius: 20px;
     border-color: var(--third-color);
 }
+
+#quiz {
+    text-align: center;
+    margin: 80px;
+    
+}
