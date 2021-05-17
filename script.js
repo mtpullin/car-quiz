@@ -1,69 +1,49 @@
 var body = document.getElementById("body")
 var timerEl = document.getElementById("countdown");
-var questionEl = document.getElementById("questions");
+var questionEl = document.getElementById("quiz");
 var start = document.getElementById("start-quiz");
-var a = document.getElementById("a");
-var b = document.getElementById("b");
-var c = document.getElementById("c");
+var timeleft = 60;
+var title = document.getElementById("title")
+var answerButton = document.getElementById("answer")
 var score = 0;
 //var qimages = document.getElementById("images");
 var questions = [
     
 {
     q: "What car is this?",
-    imgSrc: "/images/1967-Chevy-Camaro.jpg",
-    choices:[{a: "Chevy Camaro"}, {b: "Dodge Dart"}, {c: "Pontiac GTO"}],
+    image: "images/1967-Chevy-Camaro.jpg",
+    choices:[{text: "Chevy Camaro"}, {text: "Dodge Dart"}, {text: "Pontiac GTO"}],
     answer: "Chevy Camaro"
 },
     
 {   q: "What car is this?",
-    choices: [{a: "Dodge Charger"}, {b: "Ford Mustang"}, {c: "Chevy Camaro"}],
+    choices: [{text: "Dodge Charger"}, {text: "Ford Mustang"}, {text: "Chevy Camaro"}],
     answer: "Ford Mustang"
     },
     
     {
         q: "What car is this?",
-        choices: [{a:"Dodge Camaro"}, {b:"Chevy Mustang"}, {c:"Oldsmobile 442"}],
+        choices: [{text:"Dodge Camaro"}, {text:"Chevy Mustang"}, {text:"Oldsmobile 442"}],
         answer: "Oldsmobile 442"
     },
     
     {
         q: "What car is this?",
-        choices: [{a:"Chevy Corvette"}, {b:"Plymouth Baracuda"}, {c: "Pontiac Firebird"}],
+        choices: [{text:"Chevy Corvette"}, {text:"Plymouth Baracuda"}, {text: "Pontiac Firebird"}],
         answer: "Pontiac Firebird"
     },
     {q: "What car is this?",
-    choices: [{a:"Dodge Demon"}, {b:"Dodge Charger"}, {c:"Dodge Dart"}],
+    choices: [{text:"Dodge Demon"}, {text:"Dodge Charger"}, {text:"Dodge Dart"}],
     answer: "Dodge Demon"
     }
 ]
-var images = document.getElementById([
-    "./1967-Chevy-Camaro.jpg",
-    "./images/1968-ford-mustang.jpg",
-    "./1970-oldsmobile-442.jpg",
-    "./1977-Pontiac-Firebird-Trans-Am-image-685.jpg",
-    "./2017-dodge-challenger-srt-demon.jpg",
-])
-function renderquestion() {
-    let q = questions
 
-    question.innerhtml = "<p>" + q.question +"</p>";
-    images.innerhtml = "<img src="+q.imgSrc +">";
-    a.innerhtml = q.a;
-    b.innerhtml = q.b;
-    c.innerhtml = q.c;
-}
-//function showimage() {
-    //for(var i = 0; i < images.length; i++) {
-        //document.createAttribute("img")
-        //document.appendChild("body")
-        //}
-    //}
 
 function quiz() {
+    start.classList.add('hide');
+    title.classList.add('hide');
+    questionEl.classList.remove('hide');
     countdown();
-    showimage();
-    renderquestion();
     for (var i = 0; i < questions.length; i++) {
 var answer = (questions[i].q)
 
@@ -71,14 +51,16 @@ if ( answer === questions[i].a) {
     score++;}
 
 else {
-    alert("wrong!");
-    time--;
+    timeleft-= 5;
 }
-
+function nextQuestion() {
+    showQuestion(questions[i])
+}
+function showQuestion(questions) {
+    questions.innerText = questions.questionsEl
 }
 }
-
-
+}
 //timer countdown function
 function countdown() {
     var timeleft = 60;

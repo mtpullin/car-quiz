@@ -11,15 +11,26 @@
     <div class="timer">
         <h2 id="countdown"></h2>
     </div>
-    <section class="quiz">
-           <h1>Can you name these muscle cars?</h1>
-           <div id="images"></div>
-           <p id="questions"></p>
-        <button class="button" id="start-quiz">Start Quiz</button>
-        <button class="button" id="a" onclick="checkanswer('a')"></button>
-        <button class="button" id="b" onclick="checkanswer('b')"></button>
-        <button class="button" id="c" onclick="checkanswer('c')"></button>
+    <section id="quiz" class="hide">
+           
+           <div id="questions" >question</div>
+           <div id="answers">
+            <button class="button" id="answer"></button>
+            <button class="button" id="answer"></button>
+            <button class="button" id="answer"></button>
+           </div>
+           <div id="images">
+               <!--<img src="images/1967-Chevy-Camaro.jpg" alt="Chevy Camaro" width="500" height="auto">
+               <img src="images/1968-ford-mustang.jpg" alt="Ford Mustang" width="500" height="auto">
+               <img src="images/1970-oldsmobile-442.jpg" alt="Oldsmobile 442" width="500" height="auto">
+               <img src="images/1977-Pontiac-Firebird-Trans-Am-image-685.jpg" alt="Pontiac Firebird" width="500" height="auto">
+               <img src="images/2017-dodge-challenger-srt-demon.jpg" alt="Dodge Demon" width="500" height="auto">!-->
+           </div>
     </section>
+    <div class="start-button">
+        <h1 id="title">Can you name these muscle cars?</h1>
+        <button class="button" id="start-quiz">Start Quiz</button>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

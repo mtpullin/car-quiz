@@ -26,8 +26,18 @@
     border-color: var(--third-color);
 }
 
-.quiz {
+#quiz {
     text-align: center;
     margin: 80px;
     
+}
+.hide {
+    display: none;
+}
+#title {
+    text-align: center;
+    margin: 80px;
+}
+.start-button {
+    text-align: center;
 }
