@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Muscle Car Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="style.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>LOTR Film Quiz</title>
 </head>
 <body>
-    <div class="timer">
-        <h2 id="countdown"></h2>
+  <div class="container">
+      <h2 id="countdown"></h2>
+      <div class="highscore">High Score</div>
+      <div class="score">Your Score</div>
+    <div id="question-container" class="hide">
+        <div id="questionImage"></div>
+        <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
     </div>
-    <section id="quiz" class="hide">
-           
-           <div id="questions" >question</div>
-           <div id="answers">
-            <button class="button">answer 1</button>
-            <button class="button">answer 2</button>
-            <button class="button">answer 3</button>
-           </div>
-           <div id="images">
-           </div>
-    </section>
-    <div class="start-button">
-        <h1 id="title">Can you name these muscle cars?</h1>
-        <button class="button" id="start-quiz">Start Quiz</button>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
     </div>
-    <script src="./script.js"></script>
+  </div>
 </body>
 </html>
